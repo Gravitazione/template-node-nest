@@ -36,7 +36,7 @@ $ yarn install
 
 ```bash
 # development
-$ yarn run start
+$ yarn run dev
 
 # watch mode
 $ yarn run start:dev
@@ -57,6 +57,22 @@ $ yarn run test:e2e
 # test coverage
 $ yarn run test:cov
 ```
+
+## Basic usage
+
+```bash
+# create new modules
+nest g mo modules/user
+
+# create new controllers
+nest g co modules/user
+
+# create new services
+nest g s modules/user
+```
+
+## CLI command reference
+https://docs.nestjs.com/cli/usages
 
 ## Resources
 
