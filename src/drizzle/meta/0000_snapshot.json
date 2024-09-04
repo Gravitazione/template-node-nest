@@ -1,0 +1,246 @@
+{
+  "id": "00000000-0000-0000-0000-000000000000",
+  "prevId": "",
+  "version": "5",
+  "dialect": "mysql",
+  "tables": {
+    "products": {
+      "name": "products",
+      "columns": {
+        "Id": {
+          "autoincrement": true,
+          "name": "Id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "Name": {
+          "autoincrement": false,
+          "name": "Name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "Type": {
+          "autoincrement": false,
+          "name": "Type",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "create_dt": {
+          "autoincrement": false,
+          "name": "create_dt",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {
+        "products_Id": {
+          "name": "products_Id",
+          "columns": [
+            "Id"
+          ]
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {}
+    },
+    "transaction": {
+      "name": "transaction",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "transaction_no": {
+          "autoincrement": false,
+          "name": "transaction_no",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "transaction_type": {
+          "autoincrement": false,
+          "name": "transaction_type",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "transfer_from_wallet": {
+          "autoincrement": false,
+          "name": "transfer_from_wallet",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "transfer_to_wallet": {
+          "autoincrement": false,
+          "name": "transfer_to_wallet",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "business_line_id_from": {
+          "autoincrement": false,
+          "name": "business_line_id_from",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "business_line_id_to": {
+          "autoincrement": false,
+          "name": "business_line_id_to",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "wallet_code_from": {
+          "autoincrement": false,
+          "name": "wallet_code_from",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "wallet_code_to": {
+          "autoincrement": false,
+          "name": "wallet_code_to",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "coin_name": {
+          "autoincrement": false,
+          "name": "coin_name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "amount": {
+          "autoincrement": false,
+          "name": "amount",
+          "type": "decimal(10,0)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "create_dt": {
+          "autoincrement": false,
+          "name": "create_dt",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {
+        "transaction_id": {
+          "name": "transaction_id",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {}
+    },
+    "users": {
+      "name": "users",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "username": {
+          "autoincrement": false,
+          "name": "username",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "email": {
+          "autoincrement": false,
+          "name": "email",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "password": {
+          "autoincrement": false,
+          "name": "password",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "default": "(CURRENT_TIMESTAMP)",
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "updated_at": {
+          "default": "(CURRENT_TIMESTAMP)",
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false,
+          "onUpdate": true
+        }
+      },
+      "compositePrimaryKeys": {
+        "users_id": {
+          "name": "users_id",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {
+        "email": {
+          "name": "email",
+          "columns": [
+            "email"
+          ]
+        },
+        "username": {
+          "name": "username",
+          "columns": [
+            "username"
+          ]
+        }
+      }
+    }
+  },
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  },
+  "internal": {
+    "tables": {
+      "users": {
+        "columns": {
+          "created_at": {
+            "isDefaultAnExpression": true
+          },
+          "updated_at": {
+            "isDefaultAnExpression": true
+          }
+        }
+      }
+    },
+    "indexes": {}
+  }
+}

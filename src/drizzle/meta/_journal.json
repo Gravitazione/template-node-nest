@@ -1,0 +1,13 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1724953997293,
+      "tag": "0000_big_luke_cage",
+      "breakpoints": true
+    }
+  ]
+}
